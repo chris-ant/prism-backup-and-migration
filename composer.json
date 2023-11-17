@@ -1,7 +1,7 @@
 {
     "name": "prism/prism-backup-and-migration",
     "description": "A WordPress plugin for backups and migration",
-    "type": "library",
+    "type": "wordpress-plugin",
     "license": "GPL2",
     "autoload": {
         "psr-4": {

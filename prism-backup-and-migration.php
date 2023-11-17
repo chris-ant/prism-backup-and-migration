@@ -12,4 +12,9 @@
  * WC tested up to: 8.2
 */
 
-require 'vendor/autoload.php';
+if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
+    require __DIR__ . '/vendor/autoload.php';
+}
+
+// in case external libraries beside composer autoload are needed checkout PHP Scoper
+// https://yoast.com/developer-blog/safely-using-php-dependencies-in-the-wordpress-ecosystem/ 

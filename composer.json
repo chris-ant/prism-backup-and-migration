@@ -1,0 +1,13 @@
+{
+    "name": "prism/prism-backup-and-migration",
+    "description": "A WordPress plugin for backups and migration",
+    "type": "library",
+    "license": "GPL2",
+    "autoload": {
+        "psr-4": {
+            "Prism\\PrismBackupAndMigration\\": "src/"
+        }
+    },
+    "minimum-stability": "alpha",
+    "require": {}
+}

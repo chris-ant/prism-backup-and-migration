@@ -11,3 +11,5 @@
  * WC requires at least: 6.4.0
  * WC tested up to: 8.2
 */
+
+require 'vendor/autoload.php';

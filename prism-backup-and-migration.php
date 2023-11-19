@@ -18,3 +18,14 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 
 // in case external libraries beside composer autoload are needed checkout PHP Scoper
 // https://yoast.com/developer-blog/safely-using-php-dependencies-in-the-wordpress-ecosystem/ 
+
+/**
+ * Some possible first steps. 
+ * 1. Create menu page. 
+ * 2. Create action and filters loader. We need this for hooking into WP.
+ * 3. ...
+ */
+
+use PrismBackupAndMigration\Wrapper\AdminMenuPage;
+$pbm_main_menu_page = new AdminMenuPage('Prism Backup and Migration', 'Prism Backup', 'manage_options', 'pbm_admin', 'dashicons-database-view', 99999999999);
+

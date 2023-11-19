@@ -7,4 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'PrismBackupAndMigration\\AdminOptions' => $baseDir . '/src/AdminOptions.php',
+    'PrismBackupAndMigration\\Wrapper\\AdminMenuPage' => $baseDir . '/src/Wrapper/AdminMenuPage.php',
 );

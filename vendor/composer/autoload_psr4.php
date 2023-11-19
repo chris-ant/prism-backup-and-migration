@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Prism\\PrismBackupAndMigration\\' => array($baseDir . '/src'),
+    'PrismBackupAndMigration\\' => array($baseDir . '/src'),
 );

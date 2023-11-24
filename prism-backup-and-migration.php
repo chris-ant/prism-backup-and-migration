@@ -31,7 +31,7 @@ if ( is_readable( PBM_PLUGIN_DIR_PATH . '/vendor/autoload.php' ) ) {
  */
 
 use PrismBackupAndMigration\Wrapper\AdminMenuPage;
-$app_start_path = PBM_PLUGIN_DIR_PATH . '/src/app/start.php';
+$app_start_path = PBM_PLUGIN_DIR_PATH . '/src/App/start.php';
 $pbm_main_menu_page = new AdminMenuPage($app_start_path, 'Prism Backup and Migration', 'Prism Backup', 'manage_options', 'pbm_admin', 'dashicons-database-view', 99999999999);
 
 function dd($something){

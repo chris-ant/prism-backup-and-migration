@@ -12,9 +12,13 @@
  * WC tested up to: 8.2
 */
 
-if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
-    require __DIR__ . '/vendor/autoload.php';
+define('PBM_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ )); 
+define('PBM_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ));
+
+if ( is_readable( PBM_PLUGIN_DIR_PATH . '/vendor/autoload.php' ) ) {
+    require PBM_PLUGIN_DIR_PATH . '/vendor/autoload.php';
 }
+
 
 // in case external libraries beside composer autoload are needed checkout PHP Scoper
 // https://yoast.com/developer-blog/safely-using-php-dependencies-in-the-wordpress-ecosystem/ 
@@ -27,5 +31,12 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
  */
 
 use PrismBackupAndMigration\Wrapper\AdminMenuPage;
-$pbm_main_menu_page = new AdminMenuPage('Prism Backup and Migration', 'Prism Backup', 'manage_options', 'pbm_admin', 'dashicons-database-view', 99999999999);
+$app_start_path = PBM_PLUGIN_DIR_PATH . '/src/app/start.php';
+$pbm_main_menu_page = new AdminMenuPage($app_start_path, 'Prism Backup and Migration', 'Prism Backup', 'manage_options', 'pbm_admin', 'dashicons-database-view', 99999999999);
 
+function dd($something){
+    echo '<pre>';
+    var_dump($something);
+    echo '<pre>';
+    die();
+}

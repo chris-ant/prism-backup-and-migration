@@ -3,6 +3,13 @@ namespace PrismBackupAndMigration\Wrapper;
 
 class AdminMenuPage{
 	/**
+	 * App Start Path - This file loads our entire admin page. 
+	 *
+	 * @var int
+	 */
+	protected $app_start_path;	
+
+	/**
 	 * Page Title - The text to be displayed in the title tags of the page when the menu is selected.
 	 *
 	 * @var string
@@ -58,15 +65,17 @@ class AdminMenuPage{
 	 * 
 	 */
 
-	public function __construct($page_title, $menu_title, $capability, $menu_slug, $icon_url = '', $possition = null)
+	public function __construct($app_start_path, $page_title, $menu_title, $capability, $menu_slug, $icon_url = '', $possition = null)
 	{
-		$this->page_title 	= $page_title;
-		$this->menu_title 	= $menu_title;
-		$this->capability 	= $capability;
-		$this->menu_slug 	= $menu_slug;
-		$this->callback 	= array($this, 'empty_callback');
-		$this->icon_url 	= $icon_url;
-		$this->possition 	= $possition;
+		$this->app_start_path 	= $app_start_path;
+		$this->page_title 		= $page_title;
+		$this->menu_title 		= $menu_title;
+		$this->capability 		= $capability;
+		$this->menu_slug 		= $menu_slug;
+		$this->callback 		= array($this, 'empty_callback');
+		$this->icon_url 		= $icon_url;
+		$this->possition 		= $possition;
+		
 		$this->register();
 	}
 
@@ -103,7 +112,7 @@ class AdminMenuPage{
 	 */
 	public function render(){
 		if(isset($_GET['page']) && $_GET['page'] == $this->menu_slug){
-			echo "<html><body><h3>Hello World</h3></body></html>";
+			require_once $this->app_start_path;
 			exit;
 		}
 	}

@@ -10,8 +10,5 @@
     },
     "minimum-stability": "alpha",
     "require": {
-        "symfony/http-foundation": "^6.4@RC",
-        "symfony/routing": "^6.4@RC",
-        "symfony/http-kernel": "^6.4@RC"
     }
 }

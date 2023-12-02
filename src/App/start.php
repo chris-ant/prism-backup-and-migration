@@ -14,11 +14,14 @@
 // namespace PrismBackupAndMigration\App\Export\Model;
 
 use PrismBackupAndMigration\App\Router;
-use PrismBackupAndMigration\App\Controllers\ExportAdminController;
+use PrismBackupAndMigration\App\Framework;
+use PrismBackupAndMigration\App\Controllers;
+
 
 $pbm_router = new Router();
 
-$pbm_router->addRoute('/', ExportAdminController::class, 'index' );
+$pbm_router->addRoute('/', 'Export Site', Controllers\ExportAdminController::class, 'index' );
+$pbm_router->addRoute('/import', 'Import Site', Controllers\ImportAdminController::class, 'index' );
 
 $pbm_admin_uri = '';
 if ( isset($_GET['path']) ){
@@ -27,5 +30,7 @@ if ( isset($_GET['path']) ){
     $pbm_admin_uri = '/';
 }
 
-$pbm_router->dispatch($pbm_admin_uri);
+$pbm_admin_framework = new Framework($pbm_router, $pbm_admin_uri);
+
+$pbm_admin_framework->dispatch($pbm_admin_uri);
 

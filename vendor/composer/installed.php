@@ -3,7 +3,7 @@
         'name' => 'prism/prism-backup-and-migration',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '10fbb6f949057892900081f2d0f870f17c1a5884',
+        'reference' => '5850c9fc845eb976fbc289c9642fe517177a9639',
         'type' => 'wordpress-plugin',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'prism/prism-backup-and-migration' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '10fbb6f949057892900081f2d0f870f17c1a5884',
+            'reference' => '5850c9fc845eb976fbc289c9642fe517177a9639',
             'type' => 'wordpress-plugin',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

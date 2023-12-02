@@ -5,9 +5,10 @@
     "license": "GPL2",
     "autoload": {
         "psr-4": {
-            "Prism\\PrismBackupAndMigration\\": "src/"
+            "PrismBackupAndMigration\\": "src/"
         }
     },
     "minimum-stability": "alpha",
-    "require": {}
+    "require": {
+    }
 }

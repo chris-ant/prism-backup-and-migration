@@ -1,0 +1,83 @@
+:root{
+    --main-text-color: #1e1e1e;
+    --main-border-color: #e0e0e0;
+    --main-hover-color: #007cba;
+    color: var(--main-text-color);
+}
+h1, h2, h3, h4, h5, figure, p, ol, ul {
+    margin: 0;
+}
+  
+ol, ul {
+    list-style: none;
+    padding-inline: 0;
+}
+
+/* h1, h2, h3, h4, h5 {
+font-size: inherit;
+font-weight: inherit;
+} */
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+/*
+Navigation
+*/
+nav ul{
+    display: flex;
+    border-bottom: 1px solid var(--main-border-color);
+    justify-content: start;
+    min-width: 500px; /* no responsive design just yet */
+}
+
+nav ul li{
+    display: flex;
+    justify-content: start;;
+    align-items: center;
+    padding: 6px 12px;
+}
+
+nav ul li.current-menu-item{
+    border-bottom: 2px solid var(--main-hover-color);
+    padding-bottom: 4px;
+}
+
+nav ul li a{
+    color: #1e1e1e;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: #007cba;
+}
+
+nav ul li.back-to-dashboard{
+    background: var(--main-text-color);
+    height: 61px;
+    margin-bottom: -1px;
+    margin-right: 20px;
+    width: 60px;
+    position: relative;
+
+}
+
+nav ul li.back-to-dashboard svg{
+    fill: var(--main-border-color);
+    outline: none;
+}
+
+nav ul li.back-to-dashboard svg:hover{
+    fill: #fff;
+}
+
+/*
+Content
+*/
+
+#main{
+    margin-top: 2em;
+    padding-left: 2em;
+}

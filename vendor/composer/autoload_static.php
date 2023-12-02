@@ -9,12 +9,12 @@ class ComposerStaticInitc33df29c547c21cfc08f8a3e2d0fb57b
     public static $prefixLengthsPsr4 = array (
         'P' => 
         array (
-            'Prism\\PrismBackupAndMigration\\' => 30,
+            'PrismBackupAndMigration\\' => 24,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Prism\\PrismBackupAndMigration\\' => 
+        'PrismBackupAndMigration\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

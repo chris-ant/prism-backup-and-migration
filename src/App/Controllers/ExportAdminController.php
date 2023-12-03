@@ -8,7 +8,6 @@ use PrismBackupAndMigration\App\Models\ExportAdmin;
 class ExportAdminController extends Controller {
     public function index(array $arguments) {
         $this->arguments = $arguments;
-        $this->setup_nav_menu();
 
         $model = new ExportAdmin;
         

@@ -19,7 +19,8 @@ class Framework
             $controller = new $controller();
             $controller->$action($arguments);
         } else {
-            throw new \Exception("No route found for URI: $uri");
+            wp_die("No route found for URI: $uri", "Nothing here", array('response' => 200));
+            // return 200 so it works with htmx without doing anything else. 
         }
     }
 }

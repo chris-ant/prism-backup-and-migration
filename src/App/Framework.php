@@ -16,11 +16,25 @@ class Framework
                 'routes'    => $this->router->routes
             );
 
+            
             $controller = new $controller();
             $controller->$action($arguments);
         } else {
-            wp_die("No route found for URI: $uri", "Nothing here", array('response' => 200));
-            // return 200 so it works with htmx without doing anything else. 
+            // return 200 so it works with htmx without doing anything else. Not great, not terrible. 
+            wp_die("No route found for URI: $uri", "Nothing here", array('response' => 200));            
         }
+    }
+
+    /**
+     * Generates extra arguments based on what's found inside the route. 
+     * Example: /book/id/{id} will generate an argument array('id' => 3)
+     * Right now dispatch does not work with this type of routes as it tries to match an exact route against what's found in the path uri. 
+     *
+     * @param string $route
+     * @return array
+     */
+    private function generateArguments(string $route): array{
+        
+        return array();
     }
 }

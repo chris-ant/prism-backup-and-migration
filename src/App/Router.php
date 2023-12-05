@@ -6,8 +6,19 @@ class Router {
     
     public $routes = [];
 
-    public function addRoute($route, $name, $controller, $action) {
-        $this->routes[$route] = ['name' => $name, 'controller' => $controller, 'action' => $action];
+    /**
+     * Registers a route
+     *
+     * @param string $route
+     * @param [type] $controller
+     * @param string $action
+     * @param array $arguments
+     * @return void
+     */
+    public function addRoute(string $route, $controller,string $action) {
+        $this->routes[$route] = ['controller' => $controller, 'action' => $action];
     }
+
+
 }
     

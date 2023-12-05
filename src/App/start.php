@@ -19,8 +19,8 @@ use PrismBackupAndMigration\App\Controllers;
 
 $pbm_router = new Router();
 
-$pbm_router->addRoute('/', 'Export Site', Controllers\ExportAdminController::class, 'index' );
-$pbm_router->addRoute('/import', 'Import Site', Controllers\ImportAdminController::class, 'index' );
+$pbm_router->addRoute('/', Controllers\ExportAdminController::class, 'index');
+$pbm_router->addRoute('/import', Controllers\ImportAdminController::class, 'index');
 
 $pbm_admin_uri = '';
 if ( isset($_GET['path']) ){

@@ -6,6 +6,9 @@ use PrismBackupAndMigration\App\Controller;
 use PrismBackupAndMigration\App\Models\ExportAdmin;
 
 class ExportAdminController extends Controller {
+
+    protected array $arguments;
+
     public function index(array $arguments) {
         $this->arguments = $arguments;
 

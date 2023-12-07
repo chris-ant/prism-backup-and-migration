@@ -17,6 +17,6 @@ class ImportAdminController extends Controller {
         );
         $this->arguments = array_merge($this->arguments, $local_arguments);
         
-        $this->render('exportadmin', $this->arguments);
+        $this->render('importadmin', $this->arguments);
     }
 }

@@ -25,12 +25,12 @@ use PrismBackupAndMigration\App\Helper;
                 $menu = array(
                     array( 'url' => '/',            'name' => 'Export Site' ),
                     array( 'url' => '/import',      'name' => 'Import Site'),
-                    array( 'url' => '/backups',     'name' => 'Backups'),
+                    array( 'url' => '/backup/id/3', 'name' => 'Backup 3'),
                     array( 'url' => '/schedules',   'name' => 'Schedules')
                 );
                 // this is needed for setting the current_menu_item css class. 
                 foreach( $menu as $menu_item ) : ?>
-            <li class="<?php echo Helper::str_compare_return($menu_item['url'], $uri, 'current_menu_item') ?>" hx-boost="true">
+            <li class="<?php echo Helper::str_compare_return($menu_item['url'], $uri, 'current_menu_item') ?>" hx-boost="disabled-true">
                 <a href="<?php echo admin_url('admin.php?page=pbm_admin&path='.$menu_item['url']); ?>" title="<?php echo $menu_item['name'] ?>">
                     <?php echo $menu_item['name'] ?>
                 </a>

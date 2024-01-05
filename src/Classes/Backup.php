@@ -10,6 +10,7 @@ class Backup {
     private array $excludedFolders = [];
     private array $excludedFileTypes = [];
     private bool $databaseOnly = false;
+    private BackupStorage $storage; // Added storage property
 
     // Constructor
     public function __construct() {
@@ -70,4 +71,33 @@ class Backup {
     public function setDatabaseOnly(bool $databaseOnly): void {
         $this->databaseOnly = $databaseOnly;
     }
+
+    // Getter and Setter for storage
+    /**
+     * Get the backup storage type.
+     *
+     * @return BackupStorage
+     */
+    public function getStorage(): BackupStorage {
+        return $this->storage;
+    }
+
+    /**
+     * Set the backup storage type.
+     *
+     * @param BackupStorage $storage
+     */
+    public function setStorage(BackupStorage $storage): void {
+        $this->storage = $storage;
+    }
+
+    // Method to store backup
+    public function storeBackup(): void {
+        $this->storage->storeBackup($this);
+    }
+
+    // Method to retrieve backup
+    public function retrieveBackup(): void {
+        $this->storage->retrieveBackup();
+    }    
 }

@@ -5,6 +5,9 @@ namespace  PrismBackupAndMigration\App\Controllers;
 use PrismBackupAndMigration\App\Controller;
 use PrismBackupAndMigration\App\Models\ExportAdmin;
 
+/**
+ * Generates a backup object that gets stored in the database using the Backup Model.
+ */
 class ExportAdminController extends Controller {
 
     protected array $arguments;

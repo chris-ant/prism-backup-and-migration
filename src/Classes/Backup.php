@@ -14,7 +14,7 @@ class Backup {
 
     // Constructor
     public function __construct() {
-        // You can add default values or initialization logic here
+       // You can add default values or initialization logic here
     }
 
     // Getters and Setters for excludedFolders

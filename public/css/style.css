@@ -52,6 +52,14 @@ nav ul li.current-menu-item{
     padding-bottom: 4px;
 }
 
+nav ul li.tools{
+    margin-left: auto;
+}
+
+nav ul li.tools + li.tools {
+    margin-left: 0;
+}
+
 nav ul li a{
     color: #1e1e1e;
     text-decoration: none;

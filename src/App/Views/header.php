@@ -36,5 +36,9 @@ use PrismBackupAndMigration\App\Helper;
                 </a>
             </li>
             <?php endforeach; ?>
+            <li class="tools"><a href="#">Color</a></li>
+            <li class="tools"><a href="#">Settings</a></li>
+            
+
         </ul>
     </nav>
